@@ -1,0 +1,32 @@
+body {
+
+}
+
+nav {
+    width: 100%;
+    background-color: green;
+}
+
+.nav-container {
+    display: flex;
+    margin: 2.5%;
+    width: 95%;
+    height: 15vh;
+    background-color: yellow;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 3fr 3fr;
+}
+
+.main-content {
+    background-color: red;
+    height: 85vh;
+}
+
+.side-bar {
+    background-color: blue;
+    height: 85vh;
+}
