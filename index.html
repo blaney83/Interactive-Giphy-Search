@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Interactive Giphy Search</title>
     <link rel="stylesheet" href="Assets/CSS/style.css">
 </head>
+
 <body>
     <nav>
         <div class="nav-container">
@@ -14,21 +16,42 @@
         </div>
     </nav>
     <div class="wrapper">
-        <div class="main-content">
-
+        <div class="row gif-row">
+            <div class="column" id="col1">
+            </div>
+            <div class="column" id="col2">
+            </div>
+            <div class="column" id="col3">
+            </div>
+            <div class="column" id="col4">
+            </div>
         </div>
+
         <div class="side-bar">
+            <h1>Movie and TV GIF Generator!</h1>
             <input type="search" name="search-term" id="searchTerm">
             <input type="submit" value="Add Button">
-            <button>Random Movie</button>
-            <button>Random TV show</button>
-            <button>Random Meme</button>
-            <button>10 More</button>
-            <button>Clear Buttons</button>
+            <button id="random-movie">Random Movie</button>
+            <button id="random-tv">Random TV show</button>
+            <button id="random-button">Mystery GIF</button>
+            <button id="add-ten">10 More</button>
+            <button id="clear-buttons">Clear Buttons</button>
+            <button id="clear-favorites">Clear Favorites</button>
+            <div class="instructions">
+                <p>Welcome to the movie and TV generator! Enter a movie or TV show in the form above and then click
+                    "Add Button" to create a button for your title in the bar above! The button will generate memes to
+                    match your selection. Try out the other buttons in the sidebar to get creative.</p>
+            </div>
+            <div class="favorites">
+                <h2>Favorites</h2>
+            </div>
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="Assets/javaScript/program.js"></script>
 
-   <script src="Assets/javaScript/program.js"></script>
 </body>
+
 </html>
