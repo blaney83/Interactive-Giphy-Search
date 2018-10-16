@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url("/Assets/Images/what-the-hex-dark.png")
+}
+
 nav {
     width: 100%;
     background-color: green;
@@ -42,6 +46,7 @@ nav {
 .column {
     flex: 25%;
     max-width: 25%;
+    height: auto;
     padding: 0 4px;
 }
 
@@ -49,6 +54,29 @@ nav {
     margin-top: 8px;
     vertical-align: middle;
 }
+
+.gif{
+    width: 100%;
+}
+
+.gifCon {
+    width: 100%;
+}
+
+.a {
+    width: 10px;
+    height: 10px;
+}
+
+button {
+    background-color: rgba(87, 86, 86, 0.849), 0.849), 0.849)
+}
+
+/* .favorite {
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+} */
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media (max-width: 800px) {
@@ -60,6 +88,20 @@ nav {
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media (max-width: 600px) {
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .orderB {
+        order: 2;
+    }
+
+    .orderA {
+        order: 3;
+    }
+
     .column {
         flex: 100%;
         max-width: 100%;

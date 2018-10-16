@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Interactive Giphy Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
     <link rel="stylesheet" href="Assets/CSS/style.css">
 </head>
 
 <body>
     <nav>
-        <div class="nav-container">
+        <div class="nav-container align-items-center">
 
         </div>
     </nav>
+    <div class="container">
     <div class="wrapper">
-        <div class="row gif-row">
+        <div class="row gif-row orderA">
             <div class="column" id="col1">
             </div>
             <div class="column" id="col2">
@@ -27,12 +30,13 @@
             </div>
         </div>
 
-        <div class="side-bar">
+        <div class="side-bar orderB">
             <h1>Movie and TV GIF Generator!</h1>
-            <input type="search" name="search-term" id="searchTerm">
-            <input type="submit" value="Add Button">
-            <button id="random-movie">Random Movie</button>
-            <button id="random-tv">Random TV show</button>
+            <form id="target" action="index.html">
+                <input type="search" name="search-term" id="searchTerm">
+                <input type="submit" value="Add Button" id="submitButton">
+            </form>
+            <br>
             <button id="random-button">Mystery GIF</button>
             <button id="add-ten">20 More</button>
             <button id="clear-buttons">Clear Buttons</button>
@@ -42,12 +46,18 @@
                     "Add Button" to create a button for your title in the bar above! The button will generate memes to
                     match your selection. Try out the other buttons in the sidebar to get creative.</p>
             </div>
-            <div class="favorites">
+            <div>
                 <h2>Favorites</h2>
+                <div class="favoritesColumn">
+                </div>
             </div>
         </div>
     </div>
+</div>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="Assets/javaScript/program.js"></script>
