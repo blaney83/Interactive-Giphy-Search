@@ -196,7 +196,7 @@ var gifManipulation = {
         var $favSrcStill = $(this).attr("data-still");
         var $favSrcAnimate = $(this).attr("data-animate");
         var $favDownload = $(this).attr("data-download");
-        var $favHTML = "<img class='favoriteSmallGif gif' src='" + $favSrcStill + "' data-still='" + $favSrcStill + "' data-animate='" + $favSrcAnimate + "' data-download='" + $favDownload + "'><img src='Assets/Images/baseline_favorite_border_black_18dp.png' class='removeFavorite'><a href='" + $favDownload + "' rel='nofollow' target='_blank'><img src='Assets/Images/baseline_insert_link_black_18dp.png' class='download' data-download='" + $favDownload + "'></a>";
+        var $favHTML = "<img class='favoriteSmallGif gif' src='" + $favSrcStill + "' data-still='" + $favSrcStill + "' data-animate='" + $favSrcAnimate + "' data-download='" + $favDownload + "'><img src='Assets/Images/baseline_favorite_border_black_18dp.png' class='removeFavorite'><a href='" + $favDownload + "' rel='nofollow' target='_blank'><img src='Assets/Images/baseline_insert_link_black_18dp.png' class='download' id='favDownload' data-download='" + $favDownload + "'></a>";
         $(".favoritesColumn").append($favHTML);
     },
 
@@ -212,10 +212,21 @@ var gifManipulation = {
         $(".favoritesColumn").empty();
     },
 
-    // downloadGif: function (e) {
-    //     var fileLocation = $(this).attr("data-download")
-    //     window.location.href = fileLocation;
-    // }
+    toggleAnimation: function () {   
+
+        $(".gif").each(function(){
+        var $state = $(this).attr("data-state")
+        var $still = $(this).attr("data-animate")
+        var $animate = $(this).attr("data-still")
+        if ($state === 'still') {
+            $(this).attr("src", $animate)
+            $(this).attr("data-state", "animate")
+        } else {
+            $(this).attr("src", $still)
+            $(this).attr("data-state", "still")
+        }
+    })
+    }
 }
 
 
@@ -243,6 +254,8 @@ $(document).ready(function () {
     $("#add-ten").on("click", apiSearches.tenMore)
 
     $("#clear-favorites").on("click", gifManipulation.clearFavorites)
+
+    $("#animate-all").on("click", gifManipulation.toggleAnimation)
 
     $(document).on("click", ".gif", gifManipulation.startStop)
 

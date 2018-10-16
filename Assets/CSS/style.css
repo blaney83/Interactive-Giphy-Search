@@ -2,23 +2,30 @@
     box-sizing: border-box;
 }
 
-body{
-    background-image: url("/Assets/Images/what-the-hex-dark.png")
+html{
+    background-image: url(../Images/Untitled.png)
 }
 
 nav {
     width: 100%;
-    background-color: green;
+    background-color: rgba(218, 165, 32, 0.514);
+    box-shadow: inset 0px 0px 10px 10px rgba(0,0,0,0.3);
+    text-align: center;
+    margin-top: 0px;
+}
+
+body{
+    background-color: transparent;
 }
 
 .nav-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 2.5%;
+    margin-left: 2.5%;
     width: 95%;
     height: auto;
-    background-color: yellow;
+    padding: 1.5rem 0rem;
+    text-align: center;
 }
 
 .wrapper {
@@ -28,12 +35,32 @@ nav {
 }
 
 .side-bar {
-    background-color: blue;
+    background-color: rgba(218, 165, 32, 0.89);
+    box-shadow: inset 0px 0px 30px 30px rgb(184, 135, 11);
     height: auto;
+    padding: .5rem;
+    border: 3px dashed black;
+    box-shadow: 0 0 0 8px rgba(218, 165, 32, 0.89);
+    border-radius: .75rem;
+    text-align: center;
+    margin-left: .5rem;
+}
+
+p{
+    font-weight: bold;
+}
+
+h2 {
+    text-decoration: underline; 
 }
 
 .gif-row{
-    background-color: red;
+    background-color: rgba(192, 192, 192, 0.534);
+    border-radius: .75rem;
+    margin: 1rem;
+    padding: .5rem;
+    border: 3px dashed gold;
+    box-shadow: 0 0 0 8px rgba(192, 192, 192, 0.534);
 }
 
 .row {
@@ -48,6 +75,8 @@ nav {
     max-width: 25%;
     height: auto;
     padding: 0 4px;
+    padding: .4rem;
+    text-align: center;
 }
 
 .column img {
@@ -57,10 +86,21 @@ nav {
 
 .gif{
     width: 100%;
+    border: 2px;
+    border-style: solid;
+    border-color: goldenrod;
+    border-radius: .5rem;
+    box-shadow: 10px 25px 10px rgb(61, 44, 1);
+}
+
+.favoriteSmallGif {
+    box-shadow: 7px 7px 7px rgb(61, 44, 1);
+    border-color: black;
 }
 
 .gifCon {
     width: 100%;
+    position: relative;
 }
 
 .a {
@@ -68,21 +108,74 @@ nav {
     height: 10px;
 }
 
-button {
-    background-color: rgba(87, 86, 86, 0.849), 0.849), 0.849)
+button, #submitButton {
+    font-size: 1rem;
+    margin: .1rem;
+    border-radius: .2rem;
+    color: goldenrod;
+    background-color: black;
+    border-color: goldenrod;
+    box-shadow: 5px 5px 3px black;
 }
 
-/* .favorite {
-    position: absolute;
-    top: 1rem;
-    bottom: 1rem;
-} */
+.imSpecial{
+    color: black;
+    border-color: black;
+    background-color: goldenrod;
+    font-weight: bold;
+
+}
+
+.favorite, .download {
+    position: relative;
+    bottom: 10px;
+    padding: 3px;
+    /* border-color: darkgoldenrod;
+    border-radius: 3px;
+    border-style: solid; */
+    margin-bottom: .4rem;
+    width: 2rem;
+}
+
+.favorite {
+    margin-right: .5rem;
+}
+.download {
+    margin-left: .5rem;
+}
+
+#favDownload {
+    position: relative;
+    bottom: 0px;
+    padding: 0px;
+    margin-bottom: 0rem;
+    width: 1.4rem;
+}
+
+
+
 
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     .column {
         flex: 50%;
         max-width: 50%;
+    }
+}
+/* adds some intermediate functionality to keep the 1 column format up to a higher screen size, but adds another row of gifs */
+@media (max-width: 880px){
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .orderB {
+        order: 2;
+    }
+
+    .orderA {
+        order: 3;
     }
 }
 
@@ -102,10 +195,25 @@ button {
         order: 3;
     }
 
+    .side-bar{
+        margin-bottom: 1rem;
+    }
+
     .column {
         flex: 100%;
         max-width: 100%;
+        padding: .6rem;
     }
+    .gif-row{
+        margin: .5rem;
+        padding: .3rem;
+    }
+}
+/* overrides CSS grid to allow the gif container to grow past 567px on bigger screens */
+@media (min-width: 576px){
+.container {
+    max-width: 1200px;
+}
 }
 
 
